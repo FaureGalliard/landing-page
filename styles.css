@@ -1,0 +1,565 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #3D5CFF, #1e3a8a);
+    color: white;
+    padding: 2rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 500px;
+}
+
+.header-content {
+    max-width: 1200px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    transform: translate(-5%);
+}
+
+.header-text {
+    flex: 1;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    background-color: #3D5CFF;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-right: 1rem;
+}
+
+.cta-button:hover {
+    background-color: #1e3a8a;
+    transform: scale(1.05);
+}
+
+.header-mockups {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 350px;
+    position: relative;
+}
+
+.mockup-container {
+    position: relative;
+    width: 33%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mockup-phone {
+    width: 100%;
+    height: auto;
+    max-height: 90%;
+    object-fit: contain;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    position: absolute;
+    bottom: 0;
+}
+
+.mockup-phone:hover {
+    transform: translateY(-10px);
+}
+
+.mockup-1 {
+    left: 0;
+    z-index: 3;
+}
+
+.mockup-2 {
+    left: 33%;
+    z-index: 2;
+}
+
+.mockup-3 {
+    left: 66%;
+    z-index: 1;
+}
+
+.mockup-2:hover, .mockup-3:hover {
+    transform: translateY(-10px);
+}
+
+.logo {
+    width: 360px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    transform: translateX(-40%);
+}
+
+.logo-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Sección de características */
+#features {
+    padding: 3rem 2rem;
+    background-color: #D9F4F1;
+    text-align: center;
+}
+
+#features h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #3D5CFF;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    background: #BAE0DB;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #3D5CFF;
+}
+
+.feature-icon {
+    width: 50px;
+    height: 50px;
+    background: #3D5CFF;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+}
+
+/* Sección de mockups */
+#mockups {
+    padding: 3rem 2rem;
+    text-align: center;
+    background-color: #f9fafb;
+}
+
+#mockups h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #3D5CFF;
+}
+
+.mockup-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.mockup {
+    background: none;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+}
+
+.mockup-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Sección de testimonios */
+#testimonials {
+    padding: 3rem 2rem;
+    background-color: #EFE0FF;
+    text-align: center;
+}
+
+#testimonials h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #3D5CFF;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testimonial {
+    background: #EFE0FF;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial p {
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.testimonial cite {
+    color: #3D5CFF;
+    font-weight: bold;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    background: #BAE0DB;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+}
+
+/* Sección Cómo Funciona */
+#how-it-works {
+    padding: 3rem 2rem;
+    text-align: center;
+    background-color: #FFE7EE;
+}
+
+#how-it-works h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #3D5CFF;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.step {
+    padding: 1rem;
+    background: #BAE0DB;
+    border-radius: 10px;
+}
+
+.step h3 {
+    font-size: 1.2rem;
+    color: #3D5CFF;
+    margin-bottom: 0.5rem;
+}
+
+/* Sección Valor Diferencial */
+#value {
+    padding: 3rem 2rem;
+    text-align: center;
+    background-color: #f9fafb;
+}
+
+#value h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #3D5CFF;
+}
+
+#value p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
+/* Sección de Seguridad */
+#security {
+    padding: 3rem 2rem;
+    background-color: #FFEBF0;
+    text-align: center;
+}
+
+#security h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #3D5CFF;
+}
+
+#security p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
+/* Sección de FAQs */
+#faqs {
+    padding: 3rem 2rem;
+    text-align: center;
+    background-color: #f9fafb;
+}
+
+#faqs h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #3D5CFF;
+}
+
+.faq-item {
+    max-width: 800px;
+    margin: 0 auto 1.5rem;
+    text-align: left;
+}
+
+.faq-item h3 {
+    font-size: 1.2rem;
+    color: #3D5CFF;
+    margin-bottom: 0.5rem;
+}
+
+/* Sección de Suscripción */
+#subscribe {
+    padding: 3rem 2rem;
+    background-color: #D9F4F1;
+    text-align: center;
+}
+
+#subscribe h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #3D5CFF;
+}
+
+#subscribe form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#subscribe input {
+    padding: 0.75rem;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+}
+
+/* Sección Para quién */
+#audience {
+    padding: 3rem 2rem;
+    text-align: center;
+    background-color: #FFEBF0;
+}
+
+#audience h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #3D5CFF;
+}
+
+.audience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.audience-item {
+    padding: 1rem;
+    background: #BAE0DB;
+    border-radius: 10px;
+}
+
+.audience-item h3 {
+    font-size: 1.2rem;
+    color: #3D5CFF;
+    margin-bottom: 0.5rem;
+}
+
+/* Sección de CTA final */
+#cta {
+    padding: 3rem 2rem;
+    text-align: center;
+    background: linear-gradient(135deg, #3D5CFF, #1e3a8a);
+    color: white;
+}
+
+#cta h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Botón flotante de ayuda */
+.help-button {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    background-color: #3D5CFF;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+
+.help-button:hover {
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    background-color: #3D5CFF;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+footer a {
+    color: #BAE0DB;
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    header {
+        min-height: 400px;
+    }
+
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .header-mockups {
+        height: 250px;
+        margin-top: 2rem;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .mockup-phone {
+        position: relative;
+        left: auto !important;
+        transform: none !important;
+        margin: 0 -10px;
+        max-height: 80%;
+    }
+
+    .mockup-phone:hover {
+        transform: translateY(-10px) !important;
+    }
+
+    .logo {
+        width: 360px;
+        height: 180px;
+    }
+
+    .mockup-image {
+        max-width: 250px;
+    }
+
+    .feature-grid, .mockup-grid, .steps-grid, .testimonial-grid, .audience-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #features, #subscribe {
+        background-color: #D9F4F1;
+    }
+
+    #testimonials, .testimonial {
+        background-color: #EFE0FF;
+    }
+
+    #how-it-works {
+        background-color: #FFE7EE;
+    }
+
+    #security, #audience {
+        background-color: #FFEBF0;
+    }
+
+    .feature-card, .step, .audience-item {
+        background: #BAE0DB;
+    }
+
+    .avatar {
+        background: #BAE0DB;
+    }
+}
